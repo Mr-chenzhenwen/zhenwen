@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>三周考</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="stylesheet" href="css/sanzhoukao.css" />
+	    <script src="js/jquery.js"></script>
+	    <script src="js/iscroll.js"></script>
+	   <script src="js/swiper.min.js"></script>
+	   <link rel="stylesheet"  href="css/swiper.min.css"/>
+	</head>
+	<body>
+		<div class="overall">
+			<header>
+				<!--<div class="head">-->
+					<div class="title">
+						<h1>一点资讯</h1>
+					</div>
+					
+					<div class="search">
+						<img src="img/images/B卷_03.png">
+						<input type="text" placeholder="大家在搜索:富二代终遭撕票">
+					</div>
+				<!--</div>-->
+			</header>
+			
+			
+			
+			<section id="roll">
+				<div>
+				<div class="all">
+				
+				<div class="one">
+						<div class="nav">
+							<div class="nav_left_ul">
+					     		<div class="swiper-container">
+							        <div class="swiper-wrapper">
+							            <div class="swiper-slide">推荐</div>
+							            <div class="swiper-slide">要闻</div>
+							            <div class="swiper-slide">北京</div>
+							            <div class="swiper-slide">视频</div>
+							            <div class="swiper-slide">电视</div>
+							            <div class="swiper-slide">一点</div>
+							            <div class="swiper-slide">二点</div>
+							            <div class="swiper-slide">三点</div>
+							        </div>
+							    </div>
+					     	</div>
+							<div class="photo"><img src="img/images/B卷_07.png"></div>
+						</div>
+				</div>
+				
+				
+				<div class="two">
+					<div class="top">
+						<h2>习近平习近平习近平习近平习近平？</h2>
+					</div>
+					<div class="down">
+						<dl>
+							<dt><img src="img/images/B卷_11.png"></dt>
+							<dd>
+								<a>一点资讯</a>
+    							<a>9999评</a>
+    							<a>1分钟前</a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				
+				
+				<div class="three">
+					<div class="left">
+						<dl>
+							<dd><h2>金三胖金三胖金三胖金三胖金三胖？金三胖金三胖</h2><p><img src="img/images/B卷_17.png"></p><a>哈哈哈</a>
+						  	<a>66评价</a></dd>
+							<dt><img src="img/images/B卷_15.png"></dt>	
+						</dl>
+						
+					</div>
+				  
+				</div>
+				
+				
+				<div class="four">
+					<div class="left">
+						<dl>
+							<dd><h2>金三胖金三胖金三胖金三胖金三胖？金三胖金三胖</h2><p><img src="img/images/B卷_17.png"></p><a>哈哈哈</a>
+						  	<a>66评价</a></dd>
+							<dt><img src="img/images/B卷_15.png"></dt>	
+						</dl>
+						
+					</div>
+				  
+				</div>
+				
+				
+				
+				
+				<div class="five">
+					<h2>全国彩礼地图:3000万人娶不到老婆，因为她们当年都被某某杀死了...</h2>
+					<div class="photo"><img src="img/images/B卷111_03.png"><img src="img/images/B卷111_03.png"><img src="img/images/B卷111_03.png"></div>
+				    <p><a>深圳租房信息共享</a><a>999评</a><a>1小时前</a></p>
+				</div>
+				
+				
+				
+				
+				<div class="six">
+					<h2>全国彩礼地图:3000万人娶不到老婆，因为她们当年都被某某杀死了...</h2>
+					<div class="photo"><img src="img/images/B卷111_03.png"><img src="img/images/B卷111_03.png"><img src="img/images/B卷111_03.png"></div>
+				    <p><a>深圳租房信息共享</a><a>999评</a><a>1小时前</a></p>
+				</div>
+				
+				
+				</div><!--all-->	
+				</div>
+			</section>
+			
+			
+			
+			<footer>
+				<div class="foot">
+					<dl>
+						<dt><img src="img/images/B卷_25.png"></dt>
+						<dd class="blue">首页</dd>
+					</dl>
+					<dl>
+						<dt><img src="img/images/B卷_27.png"></dt>
+						<dd>视频</dd>
+					</dl>
+					<dl>
+						<dt><img src="img/images/B卷_29.png"></dt>
+						<dd>应用号</dd>
+					</dl>
+					<dl>
+						<dt><img src="img/images/B卷_31.png"></dt>
+						<dd>我</dd>
+					</dl>
+				</div>
+			</footer>
+		</div>
+	</body>
+	
+
+	<script type="text/javascript">
+	
+	
+		   var myscroll=new IScroll("#roll",{
+				scrollbars:true,
+				disableMouse:true,
+				disablePointer:true,
+				scrollbars:'custom'					
+			});
+			
+			
+				var swiper = new Swiper('.nav .nav_left_ul .swiper-container', {
+				       pagination: '.swiper-pagination',
+				        slidesPerView:4.5,//显示数量
+				        paginationClickable: true,
+				        spaceBetween:10,
+		    });
+	
+			$('.foot dl').click(function(){
+				var $down=$(this).index();
+				console.log($down);
+				$('.foot dl dd').removeClass('blue').eq($down).addClass('blue');
+				$('section div .one').hide().eq($down).show();
+			})
+		  myscroll.refresh();
+	</script>
+</html>
